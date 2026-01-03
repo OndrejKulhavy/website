@@ -4,123 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ondřej Kulhavý</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col items-center py-20 px-6">
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Ondřej Kulhavý</h1>
-                <p class="tagline">I build software systems inside real environments — hospitals, institutions, teams — where things actually have to work.</p>
-                <p class="subtitle">Student at Timmi Akademia · Team lead · Developer at IKEM</p>
+    <main class="max-w-2xl w-full space-y-16">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-sm shrink-0">
+                <img src="assets/presenting.jpg" alt="Ondřej Kulhavý" class="w-full h-full object-cover scale-[1.8] origin-[50%_20%]">
             </div>
-            <div class="hero-image">
-                <img src="assets/PXL_20250728_123509745.jpg" alt="In surgical environment with VR system">
-            </div>
-        </div>
-    </section>
-
-    <!-- NOW -->
-    <section class="now">
-        <div class="container narrow">
-            <h2>Now</h2>
-            <div class="now-items">
-                <div class="now-item">
-                    <h3>Timmi Akademia, Prague</h3>
-                    <p>Team-based program where we run real companies. I lead a team responsible for execution and delivery.</p>
+            <div class="space-y-3">
+                <div>
+                    <h1 class="text-3xl font-semibold tracking-tight text-gray-900">Ondřej Kulhavý</h1>
+                    <p class="text-gray-500 text-lg">Developer & Student</p>
                 </div>
-                <div class="now-item">
-                    <h3>Institute for Clinical and Experimental Medicine (IKEM)</h3>
-                    <p>Developing internal systems for managing patient-specific 3D models and VR-based surgical planning.</p>
+                <div class="flex gap-4 text-sm text-gray-400">
+                    <span>🇨🇿 Czech Republic</span>
+                    <span>•</span>
+                    <span>Tiimiakatemia (Team Tuuli)</span>
                 </div>
-                <div class="now-item">
-                    <h3>Independent exploration</h3>
-                    <p>I gravitate toward environments where responsibility is real and outcomes matter.</p>
+                <div class="pt-1">
+                    <a href="https://www.linkedin.com/in/ondrejkulhavy/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-[#0077b5] text-white rounded-lg text-sm font-medium hover:bg-[#006396] transition-colors shadow-sm hover:shadow">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        Let's Connect
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- CORE PROJECT -->
-    <section class="project">
-        <div class="container">
-            <div class="project-grid">
-                <div class="project-story">
-                    <h2>VR & 3D model management for surgical planning</h2>
-                    
-                    <div class="project-block">
-                        <h3>The problem</h3>
-                        <p>Hospitals had no proper system for managing patient-specific 3D models for VR. Existing tools were primitive and unscalable.</p>
+        <!-- About -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest">About</h2>
+            <p class="text-gray-600 leading-relaxed max-w-xl">
+                I'm a 20-year-old developer from the Czech Republic. I previously studied software development in Ireland and am currently part of Team Tuuli at Tiimiakatemia. I focus on building meaningful technology that solves real problems.
+            </p>
+        </section>
+
+        <!-- Work -->
+        <section class="space-y-6">
+            <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Selected Work</h2>
+            
+            <div class="group">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/logo.svg" alt="VRLab" class="h-8">
                     </div>
-                    
-                    <div class="project-block">
-                        <h3>What I built</h3>
-                        <p>A web-based system with a patient database, 3D model management, VR integration, and controller-based interaction used directly in surgical rooms.</p>
+                    <span class="text-xs text-gray-400 text-right">Institute for Clinical and<br>Experimental Medicine</span>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                    A web application and database system for managing patient data and 3D anatomical models. It distributes models to VR devices for surgical planning and is used daily in transplant procedures.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+                    <div class="rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
+                        <video src="assets/PXL_20250729_071519311%20(1).mp4" controls class="w-full h-48 object-cover"></video>
                     </div>
-                    
-                    <div class="project-block">
-                        <h3>Where it's used</h3>
-                        <p>By surgeons at IKEM for preoperative planning and model inspection.</p>
+                    <div class="rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
+                        <img src="assets/PXL_20250728_123509745.jpg" alt="IKEM VR Setup" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
+                        <img src="assets/app.png" alt="IKEM App Interface" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
-                
-                <div class="project-visuals">
-                    <img src="assets/PXL_20250728_123543518.PORTRAIT~2.jpg" alt="Surgical room with 3D model display" class="project-img">
-                    <video autoplay loop muted playsinline class="project-video">
-                        <source src="assets/PXL_20250729_071519311 (1).mp4" type="video/mp4">
-                    </video>
+
+                <div class="flex gap-3 text-xs text-gray-400">
+                    <span class="bg-gray-100 px-2 py-1 rounded">Healthcare</span>
+                    <span class="bg-gray-100 px-2 py-1 rounded">VR</span>
+                    <span class="bg-gray-100 px-2 py-1 rounded">3D Modeling</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- OTHER WORK -->
-    <section class="other-work">
-        <div class="container">
-            <div class="work-grid">
-                <div class="work-item">
-                    <h3>Augmented Reality exploration</h3>
-                    <p>Investigating AR applications for medical visualization and training scenarios.</p>
-                </div>
-                <div class="work-item">
-                    <h3>Public presentations & conferences</h3>
-                    <img src="assets/241212_PIKM0113-Enhanced-NR.jpg" alt="Presenting at conference">
+        <!-- Contact -->
+        <section class="space-y-6 pt-8 border-t border-gray-100">
+            <div class="flex flex-wrap gap-6 items-center">
+                <a href="https://github.com/OndrejKulhavy" class="text-gray-400 hover:text-gray-900 transition-colors" aria-label="GitHub">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ondrejkulhavy/" class="text-gray-400 hover:text-gray-900 transition-colors" aria-label="LinkedIn">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.instagram.com/okulhavy/?hl=cs" class="text-gray-400 hover:text-gray-900 transition-colors" aria-label="Instagram">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:ondrejkulhavy@proton.me" class="text-gray-400 hover:text-gray-900 transition-colors" aria-label="Email">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center gap-2 text-gray-400 text-sm ml-auto">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>ondrejkulhavy</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DECISIONS -->
-    <section class="decisions">
-        <div class="container narrow">
-            <h2>How I choose what to work on</h2>
-            <p>I've studied abroad, explored different educational paths, and left environments that didn't match the level of responsibility I was already working with. I optimize for learning through execution, not credentials.</p>
-        </div>
-    </section>
+    </main>
 
-    <!-- WORKING WITH PEOPLE -->
-    <section class="people">
-        <div class="container narrow">
-            <h2>Working with people</h2>
-            <p>I often end up structuring teams, setting direction, and making decisions — especially in early or messy stages where clarity is missing.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact">
-        <div class="container narrow">
-            <p>If you're working on a system, institution, or team where failure has consequences, you can reach me at:</p>
-            <div class="contact-links">
-                <a href="mailto:ondrej@kulhavi.cz">ondrej@kulhavi.cz</a>
-                <a href="https://github.com/kulhavi" target="_blank" rel="noopener">GitHub</a>
-            </div>
-        </div>
-    </section>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
